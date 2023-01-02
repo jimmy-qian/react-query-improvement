@@ -1,0 +1,83 @@
+{
+  "name": "react-web-dashboard",
+  "version": "0.1.0",
+  "description": "Repository of react-web-dashboard",
+  "author": "Label A B.V. [labela.nl]",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "next dev -p $([ -f .port ] && cat .port || echo 3000)",
+    "dev": "npm run start",
+    "build": "next build",
+    "server": "next start",
+    "lint": "next lint",
+    "prettier": "prettier --write '**/*.{js,ts,tsx}'",
+    "analyze": "BUNDLE_ANALYZE=both npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "npx concurrently \"npm run lint\" \"npm run typecheck\"",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.18.0",
+    "@tanstack/react-table": "8.7.0",
+    "body-scroll-lock": "3.1.5",
+    "date-fns": "2.29.3",
+    "dayjs": "1.11.6",
+    "immer": "9.0.16",
+    "lodash": "4.17.21",
+    "next": "13.0.5",
+    "next-auth": "4.17.0",
+    "react": "18.2.0",
+    "react-day-picker": "8.3.7",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.40.0",
+    "react-select": "5.7.0",
+    "react-toastify": "9.1.1",
+    "styled-components": "5.3.6",
+    "zustand": "4.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.5",
+    "@babel/plugin-syntax-flow": "7.18.6",
+    "@babel/plugin-transform-react-jsx": "7.19.0",
+    "@next/bundle-analyzer": "13.0.5",
+    "@next/eslint-plugin-next": "13.0.5",
+    "@svgr/webpack": "6.5.1",
+    "@tanstack/react-query-devtools": "4.18.0",
+    "@trivago/prettier-plugin-sort-imports": "4.0.0",
+    "@types/body-scroll-lock": "3.1.0",
+    "@types/lodash": "4.14.191",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "@types/styled-components": "5.1.26",
+    "@types/webpack": "5.28.0",
+    "@typescript-eslint/eslint-plugin": "5.45.0",
+    "@typescript-eslint/parser": "5.45.0",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "next-pwa": "5.6.0",
+    "patch-package": "6.5.0",
+    "prettier": "2.8.0",
+    "ts-toolbelt": "9.6.0",
+    "typescript": "4.9.3",
+    "webpack": "5.75.0"
+  },
+  "keywords": [],
+  "labela": {
+    "boilerplate": {
+      "name": "react-web-dashboard",
+      "version": "2.2.1"
+    }
+  }
+}
